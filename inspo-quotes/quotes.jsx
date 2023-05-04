@@ -27,18 +27,23 @@ export const DailyQuoteCard = () => {
 
   // Vores citater bliver vist i en card
   return (
-    <View style={styles.container}>
-      {/* Hvis citat tilstanden ikke er null, vis citatet og forfatteren */}
-      {quote ? (
-        <>
-          <Text style={styles.quoteText}>{quote.q}</Text>
-          <Text style={styles.authorText}>- {quote.a}</Text>
-        </>
-      ) : (
-        // Hvis citat tilstanden er null, vis en "Loading..." besked
-        <Text>Loading...</Text>
-      )}
-    </View>
+    <>
+      <View>
+        <Text>A quote a day, makes the journey of life less grey</Text>
+      </View>
+      <View style={styles.container}>
+        {/* Hvis citat tilstanden ikke er null, vis citatet og forfatteren */}
+        {quote ? (
+          <>
+            <Text style={styles.quoteText}>{quote.q}</Text>
+            <Text style={styles.authorText}>- {quote.a}</Text>
+          </>
+        ) : (
+          // Hvis citat tilstanden er null, vis en "Loading..." besked
+          <Text>Loading...</Text>
+        )}
+      </View>
+    </>
   );
 };
 
