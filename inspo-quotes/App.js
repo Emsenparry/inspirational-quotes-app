@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native';
-import { ApiData } from './script';
+import DailyQuoteCard from './quotes';
 
 export default function App() {
 
   return (
     <View>
-      <ApiData />
+      <DailyQuoteCard />
     </View>
   );
 }
